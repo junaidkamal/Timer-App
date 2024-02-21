@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Timer</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="mainContainer">
+        <h1>Set Timer</h1>
+
+        <div class="inputsContainer">
+            <input type="number" oninput="this.value = this.value.replace(/[^0-9]/g, '')" placeholder="Hours"
+                id="hoursInput">
+            <input type="number" oninput="this.value = this.value.replace(/[^0-9]/g, '')" placeholder="Minutes"
+                id="minutesInput">
+            <input type="number" oninput="this.value = this.value.replace(/[^0-9]/g, '')" placeholder="Seconds"
+                id="secondsInput">
+        </div>
+
+        <div class="displayTime">
+            <span id="hoursDisplay">0</span> : <span id="minutesDisplay">0</span> : <span id="secondsDisplay">0</span> :
+            <span id="millisecondsDisplay">0</span>
+        </div>
+
+        <div class="buttonsContainer">
+            <button id="startBtn" onclick="startTimer()">Start</button>
+            <button id="stopBtn" onclick="stopTimer()">Stop</button>
+            <button id="resetBtn" onclick="resetTimer()">Reset</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
